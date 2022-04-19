@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
         type:String,
         required:true,
     },
-    phoneNumber:{
+    phone:{
         type:String,
         required:true,
     },
@@ -34,7 +34,7 @@ const userSchema = mongoose.Schema({
         default:''
     },
  
-    dateOfBirth:{
+    dateofbirth:{
         type:Date,
         default:Date.now,
     },
