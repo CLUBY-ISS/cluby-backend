@@ -77,7 +77,7 @@ router.post('/register', async (req,res) =>{
         passwordHash:bcrypt.hashSync ( req.body.password, 16 ),
         phone:req.body.phone,
         isAdmin:req.body.isAdmin,
-        street:req.body.street,
+        
         avatar:req.body.avatar,
         dateofbirth:req.body.dateofbirth,
     })
