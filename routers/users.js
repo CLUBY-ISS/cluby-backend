@@ -1,8 +1,8 @@
-const express =require('express');
+const express= require ('express');
 const router=express.Router();
 const {User}=require('../models/user');
-const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 router.get(`/`, async (req, res) =>{
     const userList = await User.find().select('-passwordHash');
@@ -31,7 +31,6 @@ router.post('/', async (req,res) =>{
         passwordHash:bcrypt.hashSync ( req.body.password, 16 ),
         phone:req.body.phone,
         isAdmin:req.body.isAdmin,
-        street:req.body.street,
         avatar:req.body.avatar,
         dateofbirth:req.body.dateofbirth,
        

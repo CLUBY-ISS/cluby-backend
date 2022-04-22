@@ -13,6 +13,21 @@ const eventSchema = mongoose.Schema({
         type:String,
         default:''
     },
+    dates: {
+        registrationStart: {
+          type: Date,
+          required: true,
+        },
+        start: {
+          type: Date,
+          required: true,
+        },
+        end: {
+          type: Date,
+          required: true,
+        },
+
+    },
    
     club:{
         type:mongoose.Schema.Types.ObjectId,
@@ -23,6 +38,12 @@ const eventSchema = mongoose.Schema({
         type:mongoose.Schema.Types.Array,
         ref:'User',
         required:true
+    },
+
+    participants:{ 
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: "User",
+        required:true 
     },
  
  

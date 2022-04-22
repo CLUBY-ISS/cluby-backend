@@ -25,14 +25,9 @@ const eventsRouter = require ('./routers/events');
 
 const api = process.env.API_URL;
 
-
-
-
 app.use( `${api}/clubs`, clubsRouter);
-app.use( `${api}/users`, clubsRouter);
-app.use( `${api}/events`, clubsRouter);
-
-
+app.use( `${api}/users`, usersRouter);
+app.use( `${api}/events`, eventsRouter);
 
 mongoose.connect(process.env.CONNECTION_STRING)
  

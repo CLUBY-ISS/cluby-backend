@@ -16,10 +16,7 @@ const userSchema = mongoose.Schema({
         type:String,
         required:true,
     },
-    id:{
-        type:String,
-        required:true,
-    },
+ 
     phone:{
         type:String,
         required:true,
